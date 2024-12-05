@@ -1,6 +1,7 @@
 import os
 import re
 import requests
+import subprocess
 
 js_folder = "js"  # JS 文件夹路径
 css_folder = "css"  # CSS 文件夹路径
@@ -63,7 +64,7 @@ def download_file(url, folder):
 # 示例用法
 file_path = "input"  # 替换为你的文件路径
 
-extract_and_download_links(file_path)
+
 
 
 def write_file_paths_to_text(js_folder, css_folder, output_file):
@@ -100,5 +101,11 @@ def write_file_paths_to_text(js_folder, css_folder, output_file):
 
 
 output_file = "README.md"  # 输出的文本文件
+# extract_and_download_links(file_path)
+# write_file_paths_to_text(js_folder, css_folder, output_file)
 
-write_file_paths_to_text(js_folder, css_folder, output_file)
+subprocess.run(["git", "add", "."], check=True)
+subprocess.run(["git", "commit", "-m", "'自动提交'"], check=True)
+
+# 推送到 GitHub 仓库
+subprocess.run(["git", "push", "origin", "main"], check=True)

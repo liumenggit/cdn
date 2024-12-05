@@ -3,6 +3,9 @@
 ## JavaScript Files
 
 ```
+https://cdn.jsdelivr.net/gh/liumenggit/cdn/js/bootstrap.bundle.min.js
+```
+```
 https://cdn.jsdelivr.net/gh/liumenggit/cdn/js/js-cloudimage-360-view.min.js
 ```
 ```
