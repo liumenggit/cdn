@@ -63,32 +63,38 @@ def download_file(url, folder):
 # 示例用法
 file_path = "input"  # 替换为你的文件路径
 
-
 extract_and_download_links(file_path)
 
 
 def write_file_paths_to_text(js_folder, css_folder, output_file):
     # 初始化存储路径的列表
-    file_paths = []
+    js_paths = []
+    css_paths = []
 
     # 遍历 js 文件夹
     if os.path.exists(js_folder):
         for root, _, files in os.walk(js_folder):
             for file in files:
-                file_paths.append(os.path.join(jsDelivr, root, file))
+                js_paths.append(os.path.join(jsDelivr, root, file))
 
     # 遍历 css 文件夹
     if os.path.exists(css_folder):
         for root, _, files in os.walk(css_folder):
             for file in files:
-                file_paths.append(os.path.join(jsDelivr, root, file))
+                css_paths.append(os.path.join(jsDelivr, root, file))
 
-    # 将路径写入文本文件
-    # 将路径写入 README.md 文件，并添加快速复制按钮
+    # 将路径写入 README.md 文件
     with open(output_file, "w", encoding="utf-8") as f:
-        for path in file_paths:
-            relative_path = os.path.relpath(path)
-            f.write(f"- `{relative_path}` [Copy](javascript:void(0); \"Copy: {relative_path}\")\n")
+        # 写入 JS 文件路径
+        f.write("# Resource File Paths\n\n")
+        f.write("## JavaScript Files\n\n")
+        for path in js_paths:
+            f.write(f"```\n{path}\n```\n")
+
+        # 写入 CSS 文件路径
+        f.write("\n## CSS Files\n\n")
+        for path in css_paths:
+            f.write(f"```\n{path}\n```\n")
 
     print(f"文件路径已写入到: {output_file}")
 
