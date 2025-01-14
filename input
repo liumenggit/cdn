@@ -10,6 +10,7 @@ function enqueue_custom_styles_and_scripts() {
 
     // 加载 Cloudimage 360 View CSS
     wp_enqueue_style('cloudimage-360', 'https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.css', array(), null);
+    wp_enqueue_style('cloudimage-360', 'https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/latest/bootstrap-coustom.css', array(), null);
 
     // 加载 Pannellum CSS
     wp_enqueue_style('pannellum', 'https://china.sferacar.ru/netcat_template/template/10/vendor/pannellum/css/pannellum.css?v=5', array(), null);
