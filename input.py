@@ -101,8 +101,8 @@ def write_file_paths_to_text(js_folder, css_folder, output_file):
 
 
 output_file = "README.md"  # 输出的文本文件
-# extract_and_download_links(file_path)
-# write_file_paths_to_text(js_folder, css_folder, output_file)
+extract_and_download_links(file_path)
+write_file_paths_to_text(js_folder, css_folder, output_file)
 
 subprocess.run(["git", "add", "."], check=True)
 subprocess.run(["git", "commit", "-m", "'自动提交'"], check=True)
