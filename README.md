@@ -18,6 +18,9 @@ https://cdn.jsdelivr.net/gh/liumenggit/cdn\js\pannellum.js
 ## CSS Files
 
 ```
+https://cdn.jsdelivr.net/gh/liumenggit/cdn\css\bootstrap-coustom-v2.css
+```
+```
 https://cdn.jsdelivr.net/gh/liumenggit/cdn\css\bootstrap-coustom.css
 ```
 ```
